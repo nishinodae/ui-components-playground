@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.top-testimonials,
+.row-div,
+.testimonial3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.row-div img,
+.testimonial3 img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.testimonial1,
+.testimonial2,
+.testimonial3,
+.testimonial4 {
+    margin: 2rem;
+}
+
+@media (max-width:650px) {
+    .top-testimonials {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .testimonial1,
+    .testimonial2 {
+        margin-bottom: 0;
+    }
+}
+
+.testimonial1>p {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.testimonial1>p::after {
+    position: absolute;
+    bottom: -8px;
+    left: 1.5rem;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid black;
+}
+
+.testimonial2,
+.testimonial4 {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.testimonial3 {
+    padding: 0;
+}
+
+.testimonial3 img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 1rem;
+}
+
+.testimonial3 div {
+    height: 10rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.role {
+    font-size: small;
+}
+
+.testimonial3 .role {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+.testimonial3 div p:nth-child(3) {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.testimonial4 {
+    text-align: center;
+}
+
+.testimonial4 img {
+    margin: 0;
+}
+
+.testimonial4 .row-div {
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.6rem 0 0.8rem 0;
+}
+
+.testimonial4 img:first-of-type,
+.testimonial4 img:last-of-type {
+    scale: 0.8;
+    opacity: 0.5;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
