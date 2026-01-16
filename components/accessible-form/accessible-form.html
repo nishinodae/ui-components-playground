@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>UI Components Playground - Accessible Form</title>
+    <meta name="description" content="Accessible Form using HTML and CSS.">
+    <!-- Open Graph Meta Tags-->
+    <!-- tells social platforms exactly how this content should appear when someone shares the link -->
+    <meta property="og:title" content="UI Components Playground - Accessible Form">
+    <meta property="og:description" content="Accessible Form using HTML and CSS.">
+    <meta property="og:image" content="../../assets/me.svg">
+    <meta property="og:image:width" content="50">
+    <meta property="og:image:height" content="68">
+    <meta property="og:image:alt" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/me.svg">
+    <!-- styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&icon_names=home,visibility,visibility_off&display=swap" />
+    <link rel="stylesheet" href="accessible-form.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="material-symbols-rounded">home</a>
+    </header>
+    <main>
+        <h1>Accessible Form</h1>
+        <div class="form-grid">
+            <form action="">
+                <div class="input-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="What should we call you?"
+                        aria-invalid="true">
+                    <span class="error-msg" aria-live="polite">Please fill in your full name</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="john@doe.com" autocomplete="email">
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">New Password</label>
+                    <div class="input-password">
+                        <input type="password" name="password" id="password" aria-required="true">
+                        <button class="material-symbols-rounded toggle-password"
+                            aria-label="Show password">visibility</button>
+                    </div>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-password">
+                        <input type="password" name="confirm-password" id="confirm-password" aria-required="true"
+                            aria-invalid="true" aria-describedby="Please confirm your password">
+                        <button class="material-symbols-rounded toggle-password"
+                            aria-label="Hide confirm password">visibility_off</button>
+                    </div>
+                    <span class="error-msg" aria-live="polite">Please confirm your password</span>
+                </div>
+
+                <button>Update Profile</button>
+            </form>
+            <div class="progress">
+                <div class="progress-wrapper">
+                    <div class="percentage">65%</div>
+                </div>
+                <p>Profile Completeness</p>
+                <ul>
+                    <li class="p-deco">Create Account</li>
+                    <li class="p-deco">Update Progress</li>
+                    <li class="p-deco">Setup Public Profile</li>
+                    <li>Complete First Project</li>
+                    <li>Invite Friends</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <footer>&copy; 2026 Masyitah Salwa. All rights reserved.</footer>
+</body>
+
+</html>
