@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>UI Components Playground - Tabs</title>
+    <meta name="description" content="Tabs using HTML, CSS, and JavaScript.">
+    <!-- Open Graph Meta Tags-->
+    <!-- tells social platforms exactly how this content should appear when someone shares the link -->
+    <meta property="og:title" content="UI Components Playground - Tabs">
+    <meta property="og:description" content="Tabs using HTML, CSS, and JavaScript.">
+    <meta property="og:image" content="../../assets/me.svg">
+    <meta property="og:image:width" content="50">
+    <meta property="og:image:height" content="68">
+    <meta property="og:image:alt" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/me.svg">
+    <!-- styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&icon_names=home&display=swap" />
+    <link rel="stylesheet" href="tabs.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="material-symbols-rounded">home</a>
+    </header>
+    <main>
+        <h1>Tabs</h1>
+        <div class="tab-layout">
+            <div class="tabs">
+                <button class="active" onclick="openTab(event, '.tab1')">HTML</button>
+                <button onclick="openTab(event, '.tab2')">CSS</button>
+                <button onclick="openTab(event, '.tab3')">JavaScript</button>
+            </div>
+            <pre class="tab1 active-tab-content">
+                <code>
+&lt;div class="tab-layout"&gt;
+    &lt;div class="tabs"&gt;
+        &lt;button class="active" onclick="openTab(event, '.tab1')"&gt;HTML&lt;/button&gt;
+        &lt;button onclick="openTab(event, '.tab2')"&gt;CSS&lt;/button&gt;
+        &lt;button onclick="openTab(event, '.tab3')"&gt;JavaScript&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;pre class="tab1 active-tab-content"&gt;
+        &lt;code&gt;
+        ...
+        &lt;/code&gt;
+    &lt;/pre&gt;
+    &lt;pre class="tab2 tab-content"&gt;
+        &lt;code&gt;
+        ...
+        &lt;/code&gt;
+    &lt;/pre&gt;
+    &lt;pre class="tab3 tab-content"&gt;
+        &lt;code&gt;
+        ...
+        &lt;/code&gt;
+    &lt;/pre&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+            <pre class="tab2 tab-content">
+                <code>
+p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tab-layout {
+    margin: 2rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.tabs {
+    text-align: start;
+    display: flex;
+    gap: 1rem;
+}
+
+.tabs button {
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(82, 82, 82);
+}
+
+.tabs .active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.active-tab-content {
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    overflow: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+code {
+    text-align: start;
+    display: block;
+    margin: 1rem;
+}                    
+                </code>
+            </pre>
+            <pre class="tab3 tab-content">
+                <code>
+const openTab = (e, selectedTab) => {
+
+    const tabButton = document.querySelectorAll('button');
+    tabButton.forEach(btn => btn.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+
+    const tabContent = document.querySelectorAll('.active-tab-content');
+    tabContent.forEach(tab => tab.classList.replace('active-tab-content', 'tab-content'));
+
+    document.querySelector(selectedTab).classList.replace('tab-content', 'active-tab-content')
+}
+                </code>
+            </pre>
+        </div>
+    </main>
+    <footer>&copy; 2026 Masyitah Salwa. All rights reserved.</footer>
+    <script src="tabs.js"></script>
+</body>
+
+</html>
