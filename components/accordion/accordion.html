@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>UI Components Playground - Accordion</title>
+    <meta name="description" content="Accordion using HTML, CSS, and JavaScript.">
+    <!-- Open Graph Meta Tags-->
+    <!-- tells social platforms exactly how this content should appear when someone shares the link -->
+    <meta property="og:title" content="UI Components Playground - Accordion">
+    <meta property="og:description" content="Accordion using HTML, CSS, and JavaScript.">
+    <meta property="og:image" content="../../assets/me.svg">
+    <meta property="og:image:width" content="50">
+    <meta property="og:image:height" content="68">
+    <meta property="og:image:alt" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/me.svg">
+    <!-- styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&icon_names=home,keyboard_arrow_down,keyboard_arrow_up&display=swap" />
+    <link rel="stylesheet" href="accordion.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="material-symbols-rounded">home</a>
+    </header>
+    <main>
+        <h1>Accordion</h1>
+        <div>
+            <h2>JavaScript Q&A</h2>
+            <p>Reference: https://github.com/sudheerj/javascript-interview-questions</p>
+            <div class="qna">
+                <button class="question">
+                    <p>What are common operations of JSON?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    <ul>
+                        <li>Parsing: Transforming a JSON-formatted string into a native JavaScript object.
+                            JSON.parse(jsonString);</li>
+                        <li>Stringification: Converting a JavaScript object into a JSON-formatted string, commonly used
+                            for data transmission or storage. JSON.stringify(object);</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is the purpose of the array slice method?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    The slice() method in JavaScript is used to extract a section of an array, returning a new array
+                    containing the selected elements.
+                    The slice() method does not mutate (change) the original array; instead, it returns a new array
+                    containing the extracted elements.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is the purpose of the array splice method?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    The splice() method in JavaScript is used to add, remove, or replace elements within an array.
+                    Unlike slice(), which creates a shallow copy and does not alter the original array, splice()
+                    modifies the original array in place and returns an array containing the removed elements.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is a first order function?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    A first-order function is a function that doesn’t accept another function as an argument and doesn’t
+                    return a function as its return value. i.e, It's a regular function that works with primitive or
+                    non-function values.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is a service worker?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    A Service worker is basically a script (JavaScript file) that runs in the background,
+                    separate from a web page and provides features that don't need a web page or user interaction. Some
+                    of the major features of service workers are Rich offline experiences(offline first web application
+                    development),
+                    periodic background syncs, push notifications, intercept and handle network requests and
+                    programmatically managing a cache of responses.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is IndexedDB?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including
+                    files/blobs. This API uses indexes to enable high-performance searches of this data.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is web storage?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    Web storage is an API that provides a mechanism by which browsers can store key/value pairs locally
+                    within the user's browser, in a much more intuitive fashion than using cookies.
+                    The web storage provides two mechanisms for storing data on the client; local storage and session
+                    storage.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is a Cookie?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    A cookie is a piece of data that is stored on your computer to be accessed by your browser. Cookies
+                    are saved as key/value pairs.
+                    For example, you can create a cookie named username as below:
+                    document.cookie = "username=John";
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>Why do you need a Cookie?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    Cookies are used to remember information about the user profile(such as username). It basically
+                    involves two steps,
+                    <ul>
+                        <li>
+                            When a user visits a web page, the user profile can be stored in a cookie.
+                        </li>
+                        <li>Next time the user visits the page, the cookie remembers the user profile.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>Why do you need a promise?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    Promises are used to handle asynchronous operations, especially in languages like JavaScript, which
+                    often work with non-blocking operations such as network requests, file I/O, and timers. When an
+                    operation is asynchronous, it doesn't immediately return a result; instead, it works in the
+                    background and provides the result later. Handling this in a clean, organized way can be difficult
+                    without a structured approach.
+                    Promises are used to:
+                    <ul>
+                        <li>Handle asynchronous operations.</li>
+                        <li>Provide a cleaner alternative to callbacks.</li>
+                        <li>Avoid callback hell.</li>
+                        <li>Make code more readable and maintainable.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">
+                    <p>What is promise.all?</p>
+                    <i class="material-symbols-rounded"></i>
+                </button>
+                <div class="answer">
+                    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets
+                    resolved when all the promises get resolved or any one of them gets rejected.
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2026 Masyitah Salwa. All rights reserved.</footer>
+    <script src="accordion.js"></script>
+</body>
+
+</html>
