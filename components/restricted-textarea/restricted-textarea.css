@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem;
+    text-align: center;
+}
+
+h1,
+p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.textarea-container{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+textarea{
+    border-radius: 1rem;
+    border: 2px solid black;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+.counter{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0.8rem;
+}
