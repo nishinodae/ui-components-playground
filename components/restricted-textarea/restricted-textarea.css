@@ -14,7 +14,7 @@ p {
     line-height: 1.2;
 }
 
-.textarea-container{
+.textarea-container {
     margin: 1em;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@ p {
     text-align: start;
 }
 
-textarea{
+textarea {
     border-radius: 1rem;
     border: 2px solid black;
     margin: 0.5rem 0 1.5rem 0;
@@ -31,8 +31,14 @@ textarea{
     resize: none;
 }
 
-.counter{
+.exceed-limit {
+    color: red;
+    outline-color: red;
+    border-color: red;
+}
+
+.counter {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 2rem;
     right: 0.8rem;
 }
