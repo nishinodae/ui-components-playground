@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem;
+    text-align: center;
+}
+
+h1,
+p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color 0.1s ease;
+}
+
+nav {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+a:hover {
+    color: rgb(34, 34, 255);
+}
+
+.tooltip {
+    opacity: 0;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    width: max-content;
+    transition: all 0.5s ease;
+}
+
+.tooltip::after {
+    position: absolute;
+    /* bottom: -8px;
+    left: 45%; */
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid black;
+}
+
+a:hover .tooltip {
+    opacity: 1;
+}
+
+.slide-in .tooltip {
+    transform: translate(-50%, -20px);
+}
+
+.slide-in:hover .tooltip {
+    transform: translate(-50%, 0);
+}
+
+.scale .tooltip {
+    transform: translateX(-50%) scale(0);
+}
+
+.scale:hover .tooltip {
+    transform: translateX(-50%) scale(1);
+}
