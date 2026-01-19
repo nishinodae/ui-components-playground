@@ -1,3 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 2rem;
+}
+
+header,
+footer,
+h1 {
+    text-align: center;
+}
+
+h1,
+h3,
+p {
+    margin: 0;
+    line-height: 1.2;
+}
+
 .top-testimonials,
 .row-div,
 .testimonial3 {
